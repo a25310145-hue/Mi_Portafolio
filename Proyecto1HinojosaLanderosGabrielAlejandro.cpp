@@ -220,7 +220,7 @@ void capturarInteres(struct Interes *i, int *n){
     printf("Nivel (principiante, medio, pro): ");
     scanf("%s",i[*n].detalle.nivel);
 
-    printf("Anios practicando: ");
+    printf("Años practicando: ");
     scanf("%d",&(i[*n].detalle.anios));
 
     printf("Frecuencia (diario, semanal): ");
@@ -241,7 +241,7 @@ void imprimirInteres(struct Interes *i, int n){
         printf("ID: %d\n",i[j].idInteres);
         printf("Categoria: %s\n",i[j].categoria);
         printf("Nivel: %s\n",i[j].detalle.nivel);
-        printf("Anios: %d\n",i[j].detalle.anios);
+        printf("Años: %d\n",i[j].detalle.anios);
         printf("Frecuencia: %s\n",i[j].detalle.frecuencia);
     }
 }
