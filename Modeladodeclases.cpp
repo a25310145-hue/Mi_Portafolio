@@ -2,7 +2,7 @@
 #include <stdio.h>
 using namespace std;
 
-
+/* -------- CLASE LAVADORA -------- */
 class Lavadora{
 	private:
 		string marca;
@@ -12,7 +12,6 @@ class Lavadora{
 
 	public:
 		Lavadora();
-
 		void setMarca(string m);
 		string getMarca();
 
@@ -26,15 +25,15 @@ class Lavadora{
 		float getCapacidad();
 };
 
-// Constructor
+// DEFINICIONES FUERA
+
 Lavadora::Lavadora(){
-	marca = "";
-	modelo = "";
-	numeroSerie = "";
-	capacidad = 0;
+	marca="";
+	modelo="";
+	numeroSerie="";
+	capacidad=0;
 }
 
-// Sets y Gets
 void Lavadora::setMarca(string m){
 	this->marca = m;
 }
@@ -64,6 +63,7 @@ float Lavadora::getCapacidad(){
 }
 
 
+/* -------- CLASE REVISTA -------- */
 class Revista{
 	private:
 		string articulo;
@@ -72,41 +72,41 @@ class Revista{
 		int numero;
 		string fechaPublicacion;
 
-	public:
-		Revista(){
-			articulo = "";
-			autor = "";
-			volumen = 0;
-			numero = 0;
-			fechaPublicacion = "";
-		}
+	public: Revista(){
+		articulo="";
+		autor="";
+		volumen=0;
+		numero=0;
+		fechaPublicacion="";
+	}
 
-		void setArticulo(string a){ articulo = a; }
-		string getArticulo(){ return articulo; }
+	public: void setArticulo(string a){ articulo=a; }
+	public: string getArticulo(){ return articulo; }
 
-		void setAutor(string a){ autor = a; }
-		string getAutor(){ return autor; }
+	public: void setAutor(string a){ autor=a; }
+	public: string getAutor(){ return autor; }
 
-		void setVolumen(int v){ volumen = v; }
-		int getVolumen(){ return volumen; }
+	public: void setVolumen(int v){ volumen=v; }
+	public: int getVolumen(){ return volumen; }
 
-		void setNumero(int n){ numero = n; }
-		int getNumero(){ return numero; }
+	public: void setNumero(int n){ numero=n; }
+	public: int getNumero(){ return numero; }
 
-		void setFechaPublicacion(string f){ fechaPublicacion = f; }
-		string getFechaPublicacion(){ return fechaPublicacion; }
+	public: void setFechaPublicacion(string f){ fechaPublicacion=f; }
+	public: string getFechaPublicacion(){ return fechaPublicacion; }
 };
 
 
+/* -------- MAIN -------- */
 int main(int argc, char** argv) {
 
-	Lavadora lav;          // objeto normal
+	Lavadora lav;              // objeto normal
 	Revista *rev = new Revista(); // apuntador
 
 	int opcion, clase;
 
 	do{
-		cout << "\n----- MENU -----\n";
+		cout << "\n------ MENU ------\n";
 		cout << "1. Capturar\n";
 		cout << "2. Mostrar\n";
 		cout << "3. Salir\n";
