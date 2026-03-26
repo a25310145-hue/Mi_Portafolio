@@ -2,7 +2,7 @@
 #include <stdio.h>
 using namespace std;
 
-// -------- CLASE LAVADORA (METODOS FUERA) --------
+
 class Lavadora{
 	private:
 		string marca;
@@ -64,7 +64,6 @@ float Lavadora::getCapacidad(){
 }
 
 
-// -------- CLASE REVISTA (METODOS DENTRO) --------
 class Revista{
 	private:
 		string articulo;
@@ -99,7 +98,6 @@ class Revista{
 };
 
 
-// -------- MAIN --------
 int main(int argc, char** argv) {
 
 	Lavadora lav;          // objeto normal
